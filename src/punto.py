@@ -14,3 +14,4 @@ class Punto:
 
     def opuesto(self, punto):
         return (punto * -1)
+

@@ -43,11 +43,11 @@ class Libro:
         return (self._autor)
 
     @autor.setter
-    def autor(self, valor: str, valor2: str):
-        if not valor or not valor2:
+    def autor(self, valor: list[str, str]):
+        if not valor or len(valor) != 2:
             print ("ERROR: Falta Nombre o Apellido.")
         else:
-            self._autor = Persona(valor, valor2)
+            self._autor = Persona(valor[0], valor[1])
 
     @property
     def ISBN(self):
@@ -122,7 +122,7 @@ class Libro:
         self.titulo = input ("Titulo: ")
         ape = input ("Apellido del autor: ")
         nom = input ("Nombre del Autor: ")
-        self.autor = ape, nom
+        self.autor = [ape, nom]
         self.ISBN = input ("ISBN: ")
         self.paginas = int (input ("Paginas: "))
         self.edicion = input ("Edicion: ")
@@ -135,6 +135,6 @@ class Libro:
         print (f"Autor: {self._autor}")
         print (f"ISBN: {self._ISBN}")
         print (f"{self._editorial}, {self._lugar}")
-        print(f"{self._fecha}")
+        print(f"{self._fecha_edicion}")
         print(f"{self._paginas} paginas")
 

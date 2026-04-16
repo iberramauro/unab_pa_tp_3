@@ -13,5 +13,5 @@ class Punto:
         return (f"({self.x},{self.y})")
 
     def opuesto(self):
-        return (-self.x, -self.y)
+        return Punto(self.x * -1, self.y * -1)
 

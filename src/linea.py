@@ -1,6 +1,8 @@
+from punto import Punto
+
 class Linea:
 
-    def __init__(self, punto_a: int, punto_b: int):
+    def __init__(self, punto_a: Punto, punto_b: Punto):
         self._punto_a = punto_a
         self._punto_b = punto_b
 

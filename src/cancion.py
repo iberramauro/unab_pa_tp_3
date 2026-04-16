@@ -4,10 +4,10 @@ class Cancion:
         self.autor = autor
 
     def get_titulo(self):
-        print (f"El nombre de la cancion es {self.titulo}.")
+        return (self.titulo)
 
     def get_autor(self):
-        print (f"El nombre del autor es {self.autor}.")
+        return (self.autor)
 
     def set_titulo(self, titulo: str):
         self.titulo = titulo
